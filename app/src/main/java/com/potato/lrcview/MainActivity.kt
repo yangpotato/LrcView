@@ -2,6 +2,7 @@ package com.potato.lrcview
 
 import android.os.Bundle
 import android.os.Environment
+import android.os.Handler
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import java.io.BufferedReader
@@ -18,7 +19,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val list = getLrcList()
-        lrc_view.setLrcData(list)
+        lrc_view.post {
+            lrc_view.setLrcData(list)
+        }
+
         Thread(Runnable {
             while(true){
                 Thread.sleep(1000)

@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:minHeight="65dp">
     <TextView
         android:id="@+id/tv_lrc"
         android:layout_width="match_parent"
@@ -12,6 +13,7 @@
         android:textSize="20dp"
         android:textColor="#00ff00"
         tools:text="测试"
+        android:background="#ff0000"
         android:gravity="center"/>
     <TextView
         android:id="@+id/tv_lrc_translate"
